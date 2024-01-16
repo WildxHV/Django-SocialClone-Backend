@@ -49,7 +49,6 @@ class CommentSerializer(serializers.ModelSerializer):
     post = serializers.PrimaryKeyRelatedField(read_only=True)
 
     def save(self, **kwargs):
-        print(kwargs)
         self.post = kwargs["post"]
         return super().save(**kwargs)
 

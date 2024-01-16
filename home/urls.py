@@ -16,4 +16,15 @@ urlpatterns = [
       path('post/update/<int:pk>/', views.UpdatePost.as_view(), name='edit-post'),
       path('post/delete/<int:pk>/', views.DestroyPost.as_view(), name='delete-post'),
       
+      
+      
+      path('post/like/<int:pk>/', views.LikePost.as_view(), name='like-post'),
+
+
+      path('post/comment/<int:pk>/', views.CommentPost.as_view(), name='comment-on-post'),
+      path('post/comments/<int:pk>/', views.CommentPost.as_view(), name='view-comment-post'),
+  
+  
+      path('user/follow/<int:pk>/', views.FollowUser.as_view(), name='follow-user'),
+      
 ]
